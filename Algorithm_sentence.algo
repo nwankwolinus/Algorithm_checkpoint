@@ -1,0 +1,27 @@
+ALGORITHM Algorith_Sentence
+VAR
+    nC,nW,nV : INTEGER; 
+    //nC=Number of Characters
+    //nW=Number of Words
+    //nV=Number of Vowels
+    sEntc:=STRING;
+BEGIN
+    nC:=0;
+    nW:=0;
+    nV:=0;
+    write(sEntc)
+    read(sEntc)
+REPEAT
+    IF (sEntc[nC]="") THEN
+    nW:=nW+1;
+    END_IF
+    IF(sEntc[nC] in ["a","e","i","o","u"]) THEN
+    nV:=nV+1;
+    END_IF
+    nC:=nC+1;
+UNTIL (sEntc[nC]=".")
+write(sEntc,nC)
+write(sEntc,nW)
+write(sEntc,nV)
+END
+
